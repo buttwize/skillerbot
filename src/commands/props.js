@@ -9,7 +9,7 @@ export default {
 			message.delete();
 			return;
 		}
-		dj.getUser().chat(`- ${message.user} gave you props for playing an awesome song!`);
+		dj.chat(`- ${message.user} gave you props for playing an awesome song!`);
 		message.delete();
 	}
 }
