@@ -17,8 +17,7 @@ mp.storage = storage;
 mp.join('lvl3')
 	.then(() => {
 		mp.chat('starting up, also runescape sucks');
-		console.log(mp.room());
-		console.log(mp.users());
+		console.log(mp)
 	});
 
 
@@ -38,8 +37,7 @@ function onChat(message) {
 }
 
 function onAdvance(next, previous) {
-	console.log(next)
-	console.log(previous)
+	mp.woot();
 	if (next == null) {
 		mp.joinWaitlist();
 		return;
