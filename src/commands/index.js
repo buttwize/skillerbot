@@ -6,6 +6,7 @@ import say from './say';
 import stats from './stats';
 import ping from './ping';
 import restart from './restart';
+import help from './help';
 
 export function is_command(message) {
 	return message[0] === config.command_prefix;
@@ -17,6 +18,7 @@ export function get_command_args(message) {
 }
 
 export const list = [
+	help,
 	combatless,
 	discord,
 	say,
