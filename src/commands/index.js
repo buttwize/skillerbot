@@ -1,5 +1,10 @@
 import config from '../config';
 import combatless from './combatless';
+import discord from './discord';
+import rules from './rules';
+import say from './say';
+import stats from './stats';
+import ping from './ping';
 
 export function is_command(message) {
 	return message[0] === config.command_prefix;
@@ -11,7 +16,12 @@ export function get_command_args(message) {
 }
 
 export const list = [
-	combatless
+	combatless,
+	discord,
+	say,
+	rules,
+	stats,
+	ping
 ];
 
 export const commands = new Map();

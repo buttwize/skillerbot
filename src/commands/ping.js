@@ -1,9 +1,9 @@
 export default {
-	name: 'Combatless',
-	aliases: ['combatless', 'cbl'],
+	name: 'Ping',
+	aliases: ['ping'],
 	run: function ({mp, command, args, message}) {
-		mp.chat('rip')
-			.delay(30000)
+		mp.chat('pong')
+			.delay(10000)
 			.then((sent_message) => {
 				message.delete();
 				sent_message.delete();

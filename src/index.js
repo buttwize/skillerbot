@@ -13,14 +13,14 @@ mp.join('lvl3')
 
 
 function onChat(message) {
-	if (is_command(message.message)) {
-		const command_args = get_command_args(message.message);
-		if (commands.has(command_args[0])) {
-			const command = commands.get(command_args[0]);
-			command.run({
+	if (is_command(message.message) && !message.own()) {
+		const [command, ...args] = get_command_args(message.message);
+		if (commands.has(command)) {
+			commands.get(command).run({
 				mp,
-				command_args,
-				message: message.message
+				command,
+				args,
+				message
 			});
 		}
 	}
