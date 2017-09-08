@@ -1,8 +1,19 @@
 {
-  "name": "skillerbot",
-  "version": "0.0.1",
-  "description": "a plug.dj bot for https://plug.dj/lvl3",
-  "repository": "https://github.com/buttwize/skillerbot.git",
-  "author": "bitwise <31191954+buttwize@users.noreply.github.com>",
-  "private": true
+	"name": "skillerbot",
+	"version": "0.0.1",
+	"description": "a plug.dj bot for https://plug.dj/lvl3",
+	"repository": "https://github.com/buttwize/skillerbot.git",
+	"author": "bitwise <31191954+buttwize@users.noreply.github.com>",
+	"private": true,
+	"scripts": {
+		"start": "babel src -d bin -s --presets=env && node bin/index.js"
+	},
+	"dependencies": {
+		"miniplug": "^1.10.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-env": "^1.6.0"
+	}
 }
+qwe
