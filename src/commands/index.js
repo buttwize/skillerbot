@@ -7,6 +7,7 @@ import stats from './stats';
 import ping from './ping';
 import restart from './restart';
 import help from './help';
+import props from './props';
 
 export function is_command(message) {
 	return message[0] === config.command_prefix;
@@ -25,7 +26,8 @@ export const list = [
 	rules,
 	stats,
 	ping,
-	restart
+	restart,
+	props
 ];
 
 export const commands = new Map();
