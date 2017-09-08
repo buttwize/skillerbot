@@ -8,7 +8,8 @@
 	"scripts": {
 		"start": "babel src -d bin -s --presets=env && node bin/index.js",
 		"build": "babel src -d bin -s --presets=env && babel-node site/index.js --presets env",
-		"deploy": "yarn run build && ./site/deploy.sh"
+		"deploy": "yarn run build && ./site/deploy.sh",
+		"production": "/usr/bin/yarn && /usr/bin/yarn run build && node bin/index.js"
 	},
 	"dependencies": {
 		"forever-monitor": "^1.7.1",
