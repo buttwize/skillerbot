@@ -7,6 +7,9 @@ const storage = {
 	start_time: new Date(),
 	save: function () {
 		console.log(`Saving ${config}'s storage...`);
+	},
+	settings: {
+		autowoot: true
 	}
 };
 
@@ -30,14 +33,20 @@ function onChat(message) {
 					mp,
 					command,
 					args,
-					message
+					message,
+					settings: mp.storage.settings
 				});
 		}
 	}
 }
 
 function onAdvance(next, previous) {
-	mp.woot();
+	// autowoot
+	if(mp.storage.settings.autowoot) {
+		mp.woot();
+	}
+
+	// play if nobody else is going to play
 	if (next == null) {
 		mp.joinWaitlist();
 		return;
