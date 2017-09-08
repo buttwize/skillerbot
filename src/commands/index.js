@@ -8,6 +8,7 @@ import ping from './ping';
 import restart from './restart';
 import help from './help';
 import props from './props';
+import autowoot from './autowoot';
 
 export function is_command(message) {
 	return message[0] === config.command_prefix;
@@ -27,7 +28,8 @@ export const list = [
 	stats,
 	ping,
 	restart,
-	props
+	props,
+	autowoot
 ];
 
 export const commands = new Map();
