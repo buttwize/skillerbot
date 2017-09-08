@@ -5,6 +5,9 @@ export default {
 	aliases: ['autowoot'],
 	run: function ({mp, command, args, message, settings}) {
 		settings.autowoot = !settings.autowoot;
+		if (settings.autowoot) {
+			mp.woot();
+		}
 		mp.chat(`Autowoot is now ${settings.autowoot ? 'enabled' : 'disabled'}.`)
 			.delay(5000)
 			.then((sent) => sent.delete());
