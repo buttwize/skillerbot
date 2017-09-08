@@ -6,9 +6,11 @@
 	"author": "bitwise <31191954+buttwize@users.noreply.github.com>",
 	"private": true,
 	"scripts": {
-		"start": "babel src -d bin -s --presets=env && node bin/index.js"
+		"start": "babel src -d bin -s --presets=env && node bin/index.js",
+		"build": "babel src -d bin -s --presets=env"
 	},
 	"dependencies": {
+		"forever-monitor": "^1.7.1",
 		"miniplug": "^1.10.0"
 	},
 	"devDependencies": {
@@ -16,4 +18,3 @@
 		"babel-preset-env": "^1.6.0"
 	}
 }
-

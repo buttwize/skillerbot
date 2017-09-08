@@ -5,6 +5,7 @@ import rules from './rules';
 import say from './say';
 import stats from './stats';
 import ping from './ping';
+import restart from './restart';
 
 export function is_command(message) {
 	return message[0] === config.command_prefix;
@@ -21,7 +22,8 @@ export const list = [
 	say,
 	rules,
 	stats,
-	ping
+	ping,
+	restart
 ];
 
 export const commands = new Map();

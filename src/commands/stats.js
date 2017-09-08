@@ -1,5 +1,7 @@
 export default {
 	name: 'Stats',
+	description: 'Sends a link to osrs hiscores with the username of the player specified.',
+	params: '<username>',
 	aliases: ['stats', 'hiscore'],
 	run: function({mp, command, args, message}) {
 		const tmp = args[0];
