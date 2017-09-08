@@ -1,5 +1,6 @@
 src/config/secrets.js
 bin/
+public/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template

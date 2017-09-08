@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        meta(name='viewport', content='width=device-width,initial-scale=1')
+        title skillerbot
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,300")
+        link(rel='stylesheet', href='/style.css')
+    body
+        h1 skillerbot
+        table
+            thead
+            tr
+                th Command
+                th Description
+                th Aliases
+                th Params
+            tbody
+                each command in commands
+                    tr
+                        td= command.name
+                        td= command.description
+                        td= command.aliases
+                        td= command.params
