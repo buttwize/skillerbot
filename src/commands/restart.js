@@ -4,7 +4,7 @@ export default {
 	name: 'Restart',
 	description: 'Restarts the bot.',
 	params: 'None',
-	aliases: ['restart'],
+	aliases: ['restart', 'reload'],
 	run: function ({mp, command, args, message}) {
 		mp.chat(`Restarting ${config.name}...`)
 			.then(() => {
