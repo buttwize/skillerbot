@@ -20,7 +20,7 @@ mp.storage = storage;
 mp.join('lvl3')
 	.then(() => {
 		mp.chat('starting up, also runescape sucks');
-		console.log(mp)
+		//console.log(mp)
 	});
 
 
@@ -41,15 +41,15 @@ function onChat(message) {
 }
 
 function onAdvance(next, previous) {
-	// autowoot
-	if(mp.storage.settings.autowoot) {
-		mp.woot();
-	}
-
 	// play if nobody else is going to play
 	if (next == null) {
 		mp.joinWaitlist();
 		return;
+	}
+
+	// autowoot
+	if(mp.storage.settings.autowoot) {
+		mp.woot();
 	}
 
 	if (mp.me().id === next.dj.id) {
