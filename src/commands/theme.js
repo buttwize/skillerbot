@@ -1,7 +1,7 @@
 export default {
 	name: 'Theme',
 	description: 'Sets the theme for the room, !themes lists the current themes.',
-	params: 'None',
+	params: '[type]',
 	aliases: ['theme', 'themes'],
 	run: function ({mp, command, args, message, settings}) {
 		if (command === 'themes') {
