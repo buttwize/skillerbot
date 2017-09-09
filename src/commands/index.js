@@ -9,6 +9,7 @@ import restart from './restart';
 import help from './help';
 import props from './props';
 import autowoot from './autowoot';
+import theme from './theme';
 
 export function is_command(message) {
 	return message[0] === config.command_prefix;
@@ -29,7 +30,8 @@ export const list = [
 	ping,
 	restart,
 	props,
-	autowoot
+	autowoot,
+	theme
 ];
 
 export const commands = new Map();
