@@ -25,8 +25,11 @@ export default {
 					mp.chat(`Theme ${theme} doesn't exist.`);
 				} else {
 					const random = Math.floor(Math.random() * matches.length);
-					matches[random].activate();
-					mp.chat(`Theme set to: ${theme}.`).then((sent) => message.delete());
+					const id = matches[random].id;
+					matches[random].shuffle()
+						.then(() => mp.activatePlaylist(id)
+						.then(() => mp.chat(`Theme set to: ${theme}.`).then((sent) => message.delete()))
+					);
 				}
 			})
 		}
