@@ -10,6 +10,7 @@ import help from './help';
 import props from './props';
 import autowoot from './autowoot';
 import theme from './theme';
+import cml from './crystalmathlabs'
 
 export function is_command(message) {
 	return message[0] === config.command_prefix;
@@ -31,7 +32,8 @@ export const list = [
 	restart,
 	props,
 	autowoot,
-	theme
+	theme,
+	cml
 ];
 
 export const commands = new Map();
